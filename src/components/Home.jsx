@@ -29,10 +29,6 @@ export default function App() {
 
         <a href="#catalogo" className="btn">Ver Catálogo</a>
       </main>
-
-      <footer>
-        <h2>Angelu<span>'s</span></h2>
-      </footer>
     </>
   );
 }
