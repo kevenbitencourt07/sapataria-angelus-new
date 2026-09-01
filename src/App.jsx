@@ -8,6 +8,8 @@ function App() {
     <div className="container">
 
       <Home />
+
+      <h1>pipi</h1>
       
     </div>
   )
