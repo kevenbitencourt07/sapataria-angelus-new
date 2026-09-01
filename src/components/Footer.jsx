@@ -12,7 +12,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-links">
-          <a href="#sobre">Sobre</a>
+          <a to="/sobre">Sobre</a>
           <a href="#servicos">Serviços</a>
           <a href="#catalogo">Catálogo</a>
           <a href="#contato">Contato</a>

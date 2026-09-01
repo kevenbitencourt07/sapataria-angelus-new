@@ -29,6 +29,7 @@ export default function App() {
 
         <a href="#catalogo" className="btn">Ver Catálogo</a>
       </main>
+
     </>
   );
 }
