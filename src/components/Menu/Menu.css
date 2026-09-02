@@ -26,6 +26,7 @@ header h2 {
 
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 header h2 span {
@@ -46,6 +47,11 @@ header h2::after {
   font-weight: 400;
 
   letter-spacing: 4px;
+  text-decoration: none;
+}
+
+.linkHeader {
+  text-decoration: none;
 }
 
 /* ================= MENU ================= */
@@ -76,3 +82,20 @@ nav a {
 nav a:hover {
   color: #d09a43;
 }
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 22px 5%;
+  }
+
+  nav {
+    gap: 18px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+ }

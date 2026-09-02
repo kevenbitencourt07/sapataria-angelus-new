@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.catalogo {
+    min-height: 100vh;
+    padding: 100px 7%;
+    color: #fff;
+
+    background:
+        linear-gradient(
+         rgba(0, 0, 0, 0.52),
+         rgba(20, 5, 10, 0.65)
+        ),
+        url("../assets/image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* CABEÇALHO */
+
+.catalogo-header {
+    max-width: 750px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.catalogo-header > span {
+    color: #c8943e;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.catalogo-header h1 {
+    margin: 15px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 7vw, 85px);
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.catalogo-header h1 em {
+    color: #c8943e;
+    font-style: italic;
+}
+
+.catalogo-header p {
+    color: #aaa;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* GRID */
+
+.catalogo-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 30px;
+}
+
+/* CARD */
+
+.card-servico {
+    background: rgba(8, 5, 6, 0.88);
+    border: 1px solid rgba(200, 148, 62, 0.25);
+
+    transition: 0.4s ease;
+}
+
+.card-servico:hover {
+    border-color: rgba(200, 148, 62, 0.65);
+    transform: translateY(-6px);
+}
+
+/* IMAGEM */
+
+.card-imagem {
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.card-servico:hover .card-imagem img {
+    transform: scale(1.04);
+}
+
+/* LABEL ANTES / DEPOIS */
+
+.imagem-label {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+
+    padding: 7px 14px;
+
+    background: #5b071b;
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* BOTÃO */
+
+.card-imagem button {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+
+    padding: 10px 17px;
+
+    border: 1px solid #c8943e;
+    background: rgba(0, 0, 0, 0.75);
+
+    color: #c8943e;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card-imagem button:hover {
+    background: #c8943e;
+    color: #000;
+}
+
+/* INFORMAÇÕES */
+
+.card-info {
+    padding: 25px 28px 30px;
+}
+
+.card-info > span {
+    color: #c8943e;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.card-info h2 {
+    margin: 10px 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.card-info p {
+    margin: 0;
+
+    color: #999;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .catalogo {
+        padding: 70px 5%;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-imagem {
+        height: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .catalogo-header {
+        margin-bottom: 45px;
+    }
+
+    .card-imagem {
+        height: 300px;
+    }
+
+    .card-info h2 {
+        font-size: 28px;
+    }
+}

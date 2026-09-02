@@ -1,16 +1,18 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Menu.css"
       
 export default function Menu() {
     return (
         <>
       <header>
-        <h2>Angelu<span>'s</span></h2>
+        <Link to="/" className="linkHeader">
+          <h2>Angelu<span>'s</span></h2>
+        </Link>
 
         <nav>
-          <a href="/Sobre.jsx">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#catalogo">Catálogo</a>
+          <Link to="/sobre">Sobre</Link>
+          <Link to="/servicos">Serviços</Link>
+          <Link to="/catalogo">Catálogo</Link>
           <a href="#contato">Contato</a>
         </nav>
       </header>

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.servicos {
+    min-height: 100vh;
+    padding: 100px 7%;
+    color: #fff;
+
+    background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.52),
+        rgba(20, 5, 10, 0.65)
+    ),
+        url("../assets/image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* CABEÇALHO */
+
+.servicos-header {
+    max-width: 750px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.servicos-header > span {
+    color: #c8943e;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.servicos-header h1 {
+    margin: 15px 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 7vw, 85px);
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.servicos-header h1 em {
+    color: #c8943e;
+    font-style: italic;
+}
+
+.servicos-header p {
+    color: #aaa;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* TABELA */
+
+.tabela-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tabela {
+    width: 100%;
+    border-top: 1px solid rgba(200, 148, 62, 0.6);
+}
+
+/* CABEÇALHO DA TABELA */
+
+.tabela-topo {
+    display: grid;
+    grid-template-columns: 70px 1.2fr 2fr 170px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid rgba(200, 148, 62, 0.3);
+
+    color: #c8943e;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* LINHAS */
+
+.servico-linha {
+    display: grid;
+    grid-template-columns: 70px 1.2fr 2fr 170px;
+    align-items: center;
+
+    min-height: 115px;
+    padding: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(8, 5, 6, 0.55);
+
+    transition: 0.35s ease;
+}
+
+.servico-linha:hover {
+    background: rgba(91, 7, 27, 0.25);
+    border-bottom-color: rgba(200, 148, 62, 0.4);
+}
+
+/* NÚMERO */
+
+.numero-servico {
+    color: #765f40;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+}
+
+/* NOME */
+
+.servico-linha h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+/* DESCRIÇÃO */
+
+.servico-linha p {
+    max-width: 400px;
+    margin: 0;
+
+    color: #999;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* PREÇO */
+
+.servico-linha strong {
+    color: #c8943e;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* FINAL */
+
+.servicos-final {
+    max-width: 1200px;
+    margin: 35px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicos-final div {
+    width: 100px;
+    height: 1px;
+    background: #5b071b;
+}
+
+.servicos-final p {
+    color: #777;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .servicos {
+        padding: 70px 5%;
+    }
+
+    .tabela-topo {
+        display: none;
+    }
+
+    .servico-linha {
+        grid-template-columns: 40px 1fr;
+        gap: 5px 15px;
+        padding: 25px 15px;
+    }
+
+    .numero-servico {
+        grid-row: span 3;
+    }
+
+    .servico-linha h2 {
+        font-size: 25px;
+    }
+
+    .servico-linha p {
+        margin-top: 5px;
+    }
+
+    .servico-linha strong {
+        margin-top: 8px;
+    }
+
+    .servicos-final {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
