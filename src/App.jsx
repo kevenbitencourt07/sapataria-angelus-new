@@ -1,6 +1,5 @@
-import Home from "./components/Home"
-import Sobre from "./components/Sobre"
 import Footer from "./components/Footer"
+import Router from "./Router";
 import "./Global.css";
 
 function App() {
@@ -9,9 +8,7 @@ function App() {
 
     <div className="container">
 
-      <Home />
-
-      <Sobre />
+      <Router />
 
       <Footer />
       
