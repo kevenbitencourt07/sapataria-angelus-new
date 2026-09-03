@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
+
+/* Seção principal */
+.contentComentario {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 20px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.62),
+            rgba(20, 5, 10, 0.72)
+        ),
+        url("../assets/image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Container dos comentários */
+.containerComentario {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Card de cada comentário */
+.containerComentario article {
+    position: relative;
+
+    background: rgba(15, 10, 11, 0.90);
+    padding: 32px;
+
+    border: 1px solid rgba(200, 148, 62, 0.35);
+    border-top: 3px solid #c8943e;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+
+    transition: all 0.3s ease;
+}
+
+/* Detalhe dourado */
+.containerComentario article::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #5b071b;
+}
+
+/* Efeito ao passar o mouse */
+.containerComentario article:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(200, 148, 62, 0.7);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* Estrela */
+.containerComentario article img {
+    width: 30px;
+    height: 30px;
+
+    vertical-align: middle;
+    margin-right: 10px;
+
+    filter: sepia(1) saturate(2);
+}
+
+/* Nota */
+.containerComentario article strong {
+    color: #c8943e;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 500;
+
+    vertical-align: middle;
+}
+
+/* Nome do usuário */
+.containerComentario article h4 {
+    color: #fff;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    margin-top: 22px;
+    margin-bottom: 12px;
+}
+
+/* Texto do comentário */
+.containerComentario article p {
+    color: #aaa;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+/* Aspas decorativas */
+.containerComentario article p::before {
+    content: "“";
+
+    color: #c8943e;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 500;
+
+    line-height: 0;
+
+    margin-right: 5px;
+    vertical-align: -12px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+
+    .contentComentario {
+        padding: 50px 15px;
+    }
+
+    .containerComentario {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .containerComentario article {
+        padding: 25px;
+    }
+
+    .containerComentario article h4 {
+        font-size: 22px;
+    }
+}

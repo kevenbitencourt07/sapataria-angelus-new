@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from 'react-router-dom'
 import "./Home.css"
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
           interiores de carros clássicos como novos e couro legítimo.
         </p>
 
-        <a href="#catalogo" className="btn">Ver Catálogo</a>
+        <Link to="/catalogo" className="btn">Ver Catálogo</Link>
       </main>
 
     </>

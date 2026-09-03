@@ -1,0 +1,86 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "nome": "fbhfbdh",
+      "text": "a comment about post 1",
+      "id": "whRVyd2T9-o"
+    },
+    {
+      "nome": "fttdfd",
+      "text": "another comment about post 1",
+      "id": "PGdDgfJS-m4"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": "4",
+      "nome": "Ana Souza",
+      "email": "ana@email.com",
+      "telefone": "11999990004"
+    },
+    {
+      "id": "6",
+      "nome": "Juliana Costa",
+      "email": "juliana@email.com",
+      "telefone": "11999990006"
+    },
+    {
+      "id": "7",
+      "nome": "Lucas Almeida",
+      "email": "lucas@email.com",
+      "telefone": "11999990007"
+    },
+    {
+      "id": "8",
+      "nome": "Fernanda Lima",
+      "email": "fernanda@email.com",
+      "telefone": "11999990008"
+    },
+    {
+      "id": "9",
+      "nome": "Rafael Martins",
+      "email": "rafael@email.com",
+      "telefone": "11999990009"
+    },
+    {
+      "id": "10",
+      "nome": "Camila Rodrigues",
+      "email": "camila@email.com",
+      "telefone": "11999990010"
+    },
+    {
+      "nome": "Igor",
+      "email": "igor@hotmail.com",
+      "telefone": "1119787878",
+      "id": "TJSNp94wl"
+    },
+    {
+      "nome": "Dóris",
+      "email": "doris67@gmail.com",
+      "telefone": "124267154",
+      "id": "IdOuOgZRY"
+    },
+    {
+      "nome": "Keven Bitencourt dos Reis",
+      "email": "kevenbitencourt123@gmail.com",
+      "telefone": "11959844767",
+      "id": "An6PUiDu2LA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

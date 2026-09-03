@@ -15,12 +15,15 @@ export default function Footer() {
           <Link to="/sobre">Sobre</Link>
           <Link to="/servicos">Serviços</Link>
           <Link to="/catalogo">Catálogo</Link>
-          <a href="#contato">Contato</a>
+          <Link to="/comentario">FeedBacks</Link>
+          <Link to="/contato">Contato</Link>
+          <Link to="/cadastro">Cadastro</Link>
         </div>
 
         <div>
-          <p>São Paulo - SP</p>
-          <p>Segunda a sexta · 08:00 às 18:00</p>
+          <p>Cotia - SP</p>
+          <p>Segunda a Quinta - 08:00 às 18:00</p>
+          <p>Sexta - 07:00 às 17:00</p>
         </div>
 
       </div>

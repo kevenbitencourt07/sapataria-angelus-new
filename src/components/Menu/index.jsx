@@ -13,7 +13,9 @@ export default function Menu() {
           <Link to="/sobre">Sobre</Link>
           <Link to="/servicos">Serviços</Link>
           <Link to="/catalogo">Catálogo</Link>
-          <a href="#contato">Contato</a>
+          <Link to="/comentario">FeedBacks</Link>
+          <Link to="/contato">Contato</Link>
+          <Link to="/cadastro">Cadastro</Link>
         </nav>
       </header>
       </>

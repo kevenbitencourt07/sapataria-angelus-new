@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.contato {
+    min-height: 100vh;
+    padding: 100px 7%;
+    color: #fff;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.52),
+            rgba(20, 5, 10, 0.65)
+        ),
+        url("../assets/image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* CABEÇALHO */
+
+.contato-header {
+    max-width: 750px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.contato-header > span {
+    color: #c8943e;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.contato-header h1 {
+    margin: 15px 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 7vw, 85px);
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.contato-header h1 em {
+    color: #c8943e;
+    font-style: italic;
+}
+
+.contato-header p {
+    color: #aaa;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CONTEÚDO */
+
+.contato-conteudo {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+
+    border-top: 1px solid rgba(200, 148, 62, 0.5);
+    border-bottom: 1px solid rgba(200, 148, 62, 0.3);
+}
+
+/* INFORMAÇÕES */
+
+.contato-info {
+    padding: 15px 45px 15px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contato-item {
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contato-item:last-child {
+    border-bottom: none;
+}
+
+.contato-item > span {
+    color: #765f40;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+}
+
+.contato-item small {
+    color: #c8943e;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.contato-item h2 {
+    margin: 7px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* MENSAGEM */
+
+.contato-mensagem {
+    padding: 55px 0 55px 50px;
+}
+
+.contato-mensagem > span {
+    color: #c8943e;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.contato-mensagem h2 {
+    margin: 18px 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    line-height: 0.9;
+    font-weight: 400;
+}
+
+.contato-mensagem h2 em {
+    color: #c8943e;
+    font-style: italic;
+}
+
+.contato-mensagem p {
+    max-width: 320px;
+
+    color: #999;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.contato-mensagem a {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 13px 20px;
+
+    border: 1px solid #c8943e;
+
+    color: #c8943e;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.contato-mensagem a:hover {
+    background: #c8943e;
+    color: #000;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .contato {
+        padding: 70px 5%;
+    }
+
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-info {
+        padding: 10px 0;
+        border-right: none;
+    }
+
+    .contato-mensagem {
+        padding: 45px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contato-mensagem h2 {
+        font-size: 42px;
+    }
+}
