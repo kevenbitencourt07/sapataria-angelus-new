@@ -6,6 +6,7 @@ import Servicos from './pages/Servicos'
 import Catalogo from './pages/Catalogo'
 import Contato from './pages/Contato'
 import NotFound from './pages/NotFoud'
+import Users from "./pages/Users"
 import Menu from "./components/Menu"
 import Footer from "./components/Footer"
 import Cadastro from "./pages/Cadastro"
@@ -29,6 +30,7 @@ export default function Router() {
             <Route path="/comentario" element={<Comentario />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/users" element={<Users />} />
             <Route path="*" element={<NotFound />} />
 
         </Routes>

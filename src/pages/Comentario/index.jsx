@@ -21,8 +21,6 @@ export default function index() {
                 {comentarios.map((user) =>(
                     <article key={user.id}>
 
-                    <strong>{Number(user.nota).toFixed(1)}</strong>
-
                     <h4>{user.nome}</h4>
                     <p>{user.text}</p>
                 </article>

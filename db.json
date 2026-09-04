@@ -13,14 +13,44 @@
   ],
   "comments": [
     {
-      "nome": "fbhfbdh",
-      "text": "a comment about post 1",
-      "id": "whRVyd2T9-o"
+      "nome": "Carlos",
+      "text": "Serviço excelente, fiquei muito satisfeito com o resultado!",
+      "id": "A7kLm2Pq-1x"
     },
     {
-      "nome": "fttdfd",
-      "text": "another comment about post 1",
-      "id": "PGdDgfJS-m4"
+      "nome": "Mariana",
+      "text": "Muito capricho e atenção aos detalhes. Recomendo!",
+      "id": "B9nRt5Xw-2y"
+    },
+    {
+      "nome": "João",
+      "text": "Minha peça ficou como nova. Trabalho incrível!",
+      "id": "C3vHs8Zd-7k"
+    },
+    {
+      "nome": "Beatriz",
+      "text": "Gostei muito do atendimento e da qualidade da restauração.",
+      "id": "D6pQm4Lt-9z"
+    },
+    {
+      "nome": "Rafael",
+      "text": "O resultado superou minhas expectativas. Excelente trabalho!",
+      "id": "E2xWn7Ka-5m"
+    },
+    {
+      "nome": "Camila",
+      "text": "Profissionais muito cuidadosos e resultado impecável.",
+      "id": "F8jYt3Rb-4q"
+    },
+    {
+      "nome": "Lucas",
+      "text": "Fiquei impressionado com a transformação da peça.",
+      "id": "G5sNv9Pc-6h"
+    },
+    {
+      "nome": "Amanda",
+      "text": "Trabalho de muita qualidade. Com certeza voltarei!",
+      "id": "H4zKp1Mx-8w"
     }
   ],
   "profile": {
@@ -28,58 +58,16 @@
   },
   "users": [
     {
-      "id": "4",
-      "nome": "Ana Souza",
-      "email": "ana@email.com",
-      "telefone": "11999990004"
-    },
-    {
-      "id": "6",
-      "nome": "Juliana Costa",
-      "email": "juliana@email.com",
-      "telefone": "11999990006"
-    },
-    {
-      "id": "7",
-      "nome": "Lucas Almeida",
-      "email": "lucas@email.com",
-      "telefone": "11999990007"
-    },
-    {
-      "id": "8",
-      "nome": "Fernanda Lima",
-      "email": "fernanda@email.com",
-      "telefone": "11999990008"
-    },
-    {
-      "id": "9",
-      "nome": "Rafael Martins",
-      "email": "rafael@email.com",
-      "telefone": "11999990009"
-    },
-    {
-      "id": "10",
-      "nome": "Camila Rodrigues",
-      "email": "camila@email.com",
-      "telefone": "11999990010"
-    },
-    {
-      "nome": "Igor",
-      "email": "igor@hotmail.com",
-      "telefone": "1119787878",
-      "id": "TJSNp94wl"
-    },
-    {
-      "nome": "Dóris",
-      "email": "doris67@gmail.com",
-      "telefone": "124267154",
-      "id": "IdOuOgZRY"
-    },
-    {
       "nome": "Keven Bitencourt dos Reis",
       "email": "kevenbitencourt123@gmail.com",
       "telefone": "11959844767",
       "id": "An6PUiDu2LA"
+    },
+    {
+      "nome": "Carlos",
+      "email": "carlos1@hotmail.com",
+      "telefone": "3455688996",
+      "id": "AC--EAGkU9Q"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

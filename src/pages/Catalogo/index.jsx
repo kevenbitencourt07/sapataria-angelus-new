@@ -2,42 +2,61 @@ import React, { useState } from "react";
 import "./Catalogo.css";
 
 // Imagens
-import antes1 from "../../assets/img/antes1.jpeg"
-import depois1 from "../../assets/img/depois1.jpeg"
-import antes2 from "../../assets/img/antes2.jpeg"
-import depois2 from "../../assets/img/depois2.jpeg"
-import antes3 from "../../assets/img/antes3.jpeg"
-import depois3 from "../../assets/img/depois3.jpeg"
-import antes4 from "../../assets/img/antes4.jpeg"
-import depois4 from "../../assets/img/depois4.jpeg"
+import antes1 from "../../assets/img/antes1.jpeg";
+import depois1 from "../../assets/img/depois1.jpeg";
+
+import antes2 from "../../assets/img/antes2.jpeg";
+import depois2 from "../../assets/img/depois2.jpeg";
+
+import antes3 from "../../assets/img/antes3.jpeg";
+import depois3 from "../../assets/img/depois3.jpeg";
+
+import antes4 from "../../assets/img/antes4.jpeg";
+import depois4 from "../../assets/img/depois4.jpeg";
 
 export default function Catalogo() {
 
     const servicos = [
         {
             nome: "Restauração de Bolsa",
-            descricao: "Recuperação e renovação completa do couro."
+            descricao: "Recuperação e renovação completa do couro.",
+            antes: antes1,
+            depois: depois1
         },
         {
-            nome: "Restauração de Couro",
-            descricao: "Tratamento e revitalização do couro."
+            nome: "Pintura e Tingimento",
+            descricao: "Alteração ou recuperação da cor original da peça.",
+            antes: antes2,
+            depois: depois2
+        },
+        {
+            nome: "Limpeza de Couro",
+            descricao: "Limpeza profunda e tratamento especializado.",
+            antes: antes3,
+            depois: depois3
         },
         {
             nome: "Interior Automotivo",
-            descricao: "Restauração de interiores de carros clássicos."
+            descricao: "Restauração de interiores de carros clássicos.",
+            antes: antes4,
+            depois: depois4
         }
     ];
 
+    // Todos os cards começam mostrando "ANTES"
     const [imagemAtual, setImagemAtual] = useState(
         servicos.map(() => "antes")
     );
 
+    // Alterna somente o card clicado
     const alternarImagem = (index) => {
         setImagemAtual((prev) =>
-            prev.map((item, i) =>
+            prev.map((imagem, i) =>
                 i === index
-                    ? item === "antes" ? "depois" : "antes"
-                    : item
+                    ? imagem === "antes"
+                        ? "depois"
+                        : "antes"
+                    : imagem
             )
         );
     };
@@ -45,7 +64,9 @@ export default function Catalogo() {
     return (
         <main className="catalogo">
 
+            {/* CABEÇALHO */}
             <section className="catalogo-header">
+
                 <span>ANGELU'S</span>
 
                 <h1>
@@ -56,176 +77,74 @@ export default function Catalogo() {
                     Cada restauração é feita com cuidado,
                     técnica e atenção aos detalhes.
                 </p>
+
             </section>
 
+
+            {/* CARDS */}
             <section className="catalogo-grid">
 
-                {/* CARD 1 */}
-                <article className="card-servico">
+                {servicos.map((servico, index) => (
 
-                    <div className="card-imagem">
+                    <article
+                        className="card-servico"
+                        key={servico.nome}
+                    >
 
-                        {imagemAtual[0] === "antes" ? (
+                        {/* IMAGEM */}
+                        <div className="card-imagem">
+
                             <img
-                                src={antes1}
-                                alt="Bolsa antes da restauração"
+                                src={
+                                    imagemAtual[index] === "antes"
+                                        ? servico.antes
+                                        : servico.depois
+                                }
+                                alt={
+                                    imagemAtual[index] === "antes"
+                                        ? `${servico.nome} antes da restauração`
+                                        : `${servico.nome} depois da restauração`
+                                }
                             />
-                        ) : (
-                            <img
-                                src={depois1}
-                                alt="Bolsa depois da restauração"
-                            />
-                        )}
 
-                        <span className="imagem-label">
-                            {imagemAtual[0] === "antes"
-                                ? "ANTES"
-                                : "DEPOIS"}
-                        </span>
+                            {/* LABEL ANTES / DEPOIS */}
+                            <span className="imagem-label">
+                                {imagemAtual[index] === "antes"
+                                    ? "ANTES"
+                                    : "DEPOIS"}
+                            </span>
 
-                        <button onClick={() => alternarImagem(0)}>
-                            {imagemAtual[0] === "antes"
-                                ? "Ver depois →"
-                                : "← Ver antes"}
-                        </button>
+                            {/* BOTÃO */}
+                            <button
+                                type="button"
+                                onClick={() => alternarImagem(index)}
+                            >
+                                {imagemAtual[index] === "antes"
+                                    ? "Ver depois →"
+                                    : "← Ver antes"}
+                            </button>
 
-                    </div>
-
-                    <div className="card-info">
-                        <span>RESTAURAÇÃO</span>
-                        <h2>Restauração de Bolsa</h2>
-                        <p>
-                            Recuperação e renovação completa do couro.
-                        </p>
-                    </div>
-
-                </article>
+                        </div>
 
 
-                {/* CARD 2 */}
-                <article className="card-servico">
+                        {/* INFORMAÇÕES */}
+                        <div className="card-info">
 
-                    <div className="card-imagem">
+                            <span>RESTAURAÇÃO</span>
 
-                        {imagemAtual[1] === "antes" ? (
-                            <img
-                                src={antes2}
-                                alt="Couro antes da restauração"
-                            />
-                        ) : (
-                            <img
-                                src={depois2}
-                                alt="Couro depois da restauração"
-                            />
-                        )}
+                            <h2>
+                                {servico.nome}
+                            </h2>
 
-                        <span className="imagem-label">
-                            {imagemAtual[1] === "antes"
-                                ? "ANTES"
-                                : "DEPOIS"}
-                        </span>
+                            <p>
+                                {servico.descricao}
+                            </p>
 
-                        <button onClick={() => alternarImagem(1)}>
-                            {imagemAtual[1] === "antes"
-                                ? "Ver depois →"
-                                : "← Ver antes"}
-                        </button>
+                        </div>
 
-                    </div>
+                    </article>
 
-                    <div className="card-info">
-                        <span>RESTAURAÇÃO</span>
-                        <h2>Restauração de Couro</h2>
-                        <p>
-                            Tratamento e revitalização do couro.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                {/* CARD 3 */}
-                <article className="card-servico">
-
-                    <div className="card-imagem">
-
-                        {imagemAtual[2] === "antes" ? (
-                            <img
-                                src={antes3}
-                                alt="Interior automotivo antes da restauração"
-                            />
-                        ) : (
-                            <img
-                                src={depois3}
-                                alt="Interior automotivo depois da restauração"
-                            />
-                        )}
-
-                        <span className="imagem-label">
-                            {imagemAtual[2] === "antes"
-                                ? "ANTES"
-                                : "DEPOIS"}
-                        </span>
-
-                        <button onClick={() => alternarImagem(2)}>
-                            {imagemAtual[2] === "antes"
-                                ? "Ver depois →"
-                                : "← Ver antes"}
-                        </button>
-
-                    </div>
-
-                    <div className="card-info">
-                        <span>RESTAURAÇÃO</span>
-                        <h2>Interior Automotivo</h2>
-                        <p>
-                            Restauração de interiores de carros clássicos.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                {/* CARD 4 */}
-                <article className="card-servico">
-
-                    <div className="card-imagem">
-
-                        {imagemAtual[3] === "antes" ? (
-                            <img
-                                src={antes4}
-                                alt="Interior automotivo antes da restauração"
-                            />
-                        ) : (
-                            <img
-                                src={depois4}
-                                alt="Interior automotivo depois da restauração"
-                            />
-                        )}
-
-                        <span className="imagem-label">
-                            {imagemAtual[3] === "antes"
-                                ? "ANTES"
-                                : "DEPOIS"}
-                        </span>
-
-                        <button onClick={() => alternarImagem(2)}>
-                            {imagemAtual[3] === "antes"
-                                ? "Ver depois →"
-                                : "← Ver antes"}
-                        </button>
-
-                    </div>
-
-                    <div className="card-info">
-                        <span>RESTAURAÇÃO</span>
-                        <h2>Interior Automotivo</h2>
-                        <p>
-                            Restauração de interiores de carros clássicos.
-                        </p>
-                    </div>
-
-                </article>
+                ))}
 
             </section>
 
